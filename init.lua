@@ -858,31 +858,34 @@ require('lazy').setup({
       }
     end,
   },
-  {
-    'folke/tokyonight.nvim',
-    priority = 1000,
-    config = true,
-    opts = {
-      transparent = true,
-    },
-    init = function()
-      vim.cmd.colorscheme 'tokyonight-night'
-
-      -- You can configure highlights by doing something like:
-      vim.cmd.hi 'Comment gui=none'
-    end,
-  },
   -- {
-  --   'ellisonleao/gruvbox.nvim',
+  --   'folke/tokyonight.nvim',
   --   priority = 1000,
   --   config = true,
+  --   opts = {
+  --     transparent = true,
+  --   },
   --   init = function()
-  --     vim.cmd.colorscheme 'gruvbox'
+  --     vim.cmd.colorscheme 'tokyonight-night'
 
   --     -- You can configure highlights by doing something like:
   --     vim.cmd.hi 'Comment gui=none'
   --   end,
   -- },
+  {
+    'ellisonleao/gruvbox.nvim',
+    priority = 1000,
+    config = true,
+    opts = {
+      transparent_mode = true,
+    },
+    init = function()
+      vim.cmd.colorscheme 'gruvbox'
+
+      -- You can configure highlights by doing something like:
+      vim.cmd.hi 'Comment gui=none'
+    end,
+  },
 
   -- Highlight todo, notes, etc in comments
   { 'folke/todo-comments.nvim', event = 'VimEnter', dependencies = { 'nvim-lua/plenary.nvim' }, opts = { signs = false } },
