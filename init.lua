@@ -236,8 +236,6 @@ require('lazy').setup({
 
   'tpope/vim-surround',
 
-  'psf/black',
-
   -- NOTE: Plugins can also be added by using a table,
   -- with the first argument being the link and the following
   -- keys can be used to configure plugin behavior/loading/etc.
@@ -858,20 +856,6 @@ require('lazy').setup({
       }
     end,
   },
-  -- {
-  --   'folke/tokyonight.nvim',
-  --   priority = 1000,
-  --   config = true,
-  --   opts = {
-  --     transparent = true,
-  --   },
-  --   init = function()
-  --     vim.cmd.colorscheme 'tokyonight-night'
-
-  --     -- You can configure highlights by doing something like:
-  --     vim.cmd.hi 'Comment gui=none'
-  --   end,
-  -- },
   {
     'ellisonleao/gruvbox.nvim',
     priority = 1000,
@@ -886,6 +870,33 @@ require('lazy').setup({
       vim.cmd.hi 'Comment gui=none'
     end,
   },
+  -- {
+  --   'folke/tokyonight.nvim',
+  --   priority = 1000,
+  --   config = true,
+  --   opts = {
+  --     transparent = true,
+  --   },
+  --   init = function()
+  --     vim.cmd.colorscheme 'tokyonight-night'
+  --     -- You can configure highlights by doing something like:
+  --
+  --     vim.cmd.hi 'Comment gui=none'
+  --   end,                                                         -- {
+  -- },                                                             --   'catppuccin/nvim',
+  --   name = 'catppuccin',
+  --   priority = 1000,
+  --   opts = {
+  --     flavour = 'mocha',
+  --     transparent_background = true,
+  --   },
+  --   init = function()
+  --     vim.cmd.colorscheme 'catppuccin'
+
+  --     -- You can configure highlights by doing something like:
+  --     vim.cmd.hi 'Comment gui=none'
+  --   end,
+  -- },
 
   -- Highlight todo, notes, etc in comments
   { 'folke/todo-comments.nvim', event = 'VimEnter', dependencies = { 'nvim-lua/plenary.nvim' }, opts = { signs = false } },
